@@ -31,7 +31,7 @@ const App = () => {
   }, [location]);
 
   return (
-    <ScrollReveal
+      <ScrollReveal
       ref={childRef}
       children={() => (
         <Switch>
