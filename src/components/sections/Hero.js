@@ -6,6 +6,8 @@ import Button from '../elements/Button';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
 
+const videoPlaceholder = require('./../../assets/images/video-placeholder.png');
+
 const propTypes = {
   ...SectionProps.types
 }
@@ -13,7 +15,6 @@ const propTypes = {
 const defaultProps = {
   ...SectionProps.defaults
 }
-
 const Hero = ({
   className,
   topOuterDivider,
@@ -61,7 +62,8 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Visualize model testing in <span className="text-color-primary">XR</span>
+              Visualize model testing in <br/>
+               <span className="text-color-primary">Mixed Reality</span>
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
@@ -80,15 +82,16 @@ const Hero = ({
           </div>
           <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
             <a
-              data-video="https://player.vimeo.com/video/174002812"
+              data-video="https://youtu.be/AYd7KC0yzKw"
               href="#0"
               aria-controls="video-modal"
               onClick={openModal}
             >
+              
               <Image
                 className="has-shadow"
-                src={require('./../../assets/images/video-placeholder.jpg')}
-                alt="Hero"
+                src={videoPlaceholder}
+                alt="Our selling video"
                 width={896}
                 height={504} />
             </a>
@@ -97,7 +100,7 @@ const Hero = ({
             id="video-modal"
             show={videoModalActive}
             handleClose={closeModal}
-            video="https://player.vimeo.com/video/174002812"
+            video="https://www.youtube.com/embed/AYd7KC0yzKw"
             videoTag="iframe" />
         </div>
       </div>
