@@ -112,7 +112,7 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>Documentation</Link>
+                      <a href="https://github.com/Gefest-Vision"  target="_blank" rel="noreferrer"  onClick={closeMenu}>Documentation</a>
                     </li>
                   </ul>
                   <ul className={
@@ -124,12 +124,15 @@ const Header = ({
                       <Link to="#0" onClick={closeMenu}>Use cases</Link>
                     </li>
                   </ul>
-                  {!hideSignin &&
+                  { 
+                  /*
+                  !hideSignin &&
                     <ul className="list-reset header-nav-right">
                       <li>
                         <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Sign up</Link>
                       </li>
                     </ul>
+                    */
                     }
                 </div>
               </nav>
