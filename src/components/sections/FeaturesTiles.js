@@ -2,7 +2,13 @@ import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
-import Image from '../elements/Image';
+import FeatureTile from '../elements/FeatureTile';
+
+import {IconContext} from "react-icons";
+import { GoMarkGithub, GoGitBranch, GoCircuitBoard,  } from "react-icons/go";
+import { TbHeartRateMonitor, } from "react-icons/tb";
+import { GiServerRack,  } from "react-icons/gi";
+import { BsFillShieldLockFill, } from 'react-icons/bs';
 
 const propTypes = {
   ...SectionTilesProps.types
@@ -11,6 +17,7 @@ const propTypes = {
 const defaultProps = {
   ...SectionTilesProps.defaults
 }
+
 const FeaturesTiles = ({
   className,
   topOuterDivider,
@@ -44,8 +51,8 @@ const FeaturesTiles = ({
   );
 
   const sectionHeader = {
-    title: 'Build up the whole picture',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    title: 'General features',
+    paragraph: 'Let`s see what the next generation of engineering can bring to your business.'
   };
 
   return (
@@ -58,138 +65,39 @@ const FeaturesTiles = ({
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className={tilesClasses}>
 
-            <div className="tiles-item reveal-from-bottom">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-01.svg')}
-                      alt="Features tile icon 01"
-                      width={64}
-                      height={64} />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
-                </div>
-              </div>
-            </div>
+          <IconContext.Provider value={{ style: { verticalAlign: 'middle', width: '60' } }} >
 
-            <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-02.svg')}
-                      alt="Features tile icon 02"
-                      width={64}
-                      height={64} />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
-                </div>
-              </div>
-            </div>
+          <FeatureTile 
+                textHeader="Customize for your own" 
+                textContent="This project is being developed primarily with the idea that the application should be flexible for the end user" 
+                imageLink={<GoMarkGithub/>}/>
 
-            <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-03.svg')}
-                      alt="Features tile icon 03"
-                      width={64}
-                      height={64} />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
-                </div>
-              </div>
-            </div>
+          <FeatureTile 
+                textHeader="Control Versioning"
+                textContent="The architecture of the application makes it easy to versionalize your projects and ongoing tests, experiments"
+                imageLink={<GoGitBranch/>}/>
 
-            <div className="tiles-item reveal-from-bottom">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-04.svg')}
-                      alt="Features tile icon 04"
-                      width={64}
-                      height={64} />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
-                </div>
-              </div>
-            </div>
+          <FeatureTile 
+                textHeader="Digital and modern planing" 
+                textContent="The built-in VCS makes it easy to integrate modern business processes and planning into your business such as Agile"
+                imageLink={<GoCircuitBoard/>}/>
 
-            <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-05.svg')}
-                      alt="Features tile icon 05"
-                      width={64}
-                      height={64} />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
-                </div>
-              </div>
-            </div>
+          <FeatureTile 
+                textHeader="Distributed" 
+                textContent="The application architecture is designed for highload and distributed computing" 
+                imageLink={<GiServerRack/>}/>
 
-            <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-06.svg')}
-                      alt="Features tile icon 06"
-                      width={64}
-                      height={64} />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
-                </div>
-              </div>
-            </div>
+          <FeatureTile 
+                textHeader="Monitor" 
+                textContent="The pipeline of calculations at the top level is designed specifically to make it easy to track the load and the calculation process for any engines" 
+                imageLink={<TbHeartRateMonitor/>}/>
 
+          <FeatureTile 
+                textHeader="Secure"
+                textContent="Our systems are developed with a Secure-by-Design approach, which guarantees security at all stages of the application" 
+                imageLink={<BsFillShieldLockFill/>}/>
+          
+          </IconContext.Provider>
           </div>
         </div>
       </div>
