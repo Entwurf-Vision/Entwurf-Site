@@ -3,20 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "atomize": "^1.0.28",
+    "@react-three/drei": "^9.53.3",
+    "@react-three/fiber": "^8.10.0",
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-ga": "^2.7.0",
+    "react-icons": "^4.7.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^5.0.1",
     "react-transition-group": "^4.4.5",
-    "sass": "^1.49.7"
+    "sass": "^1.49.7",
+    "three": "^0.148.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cruip/open-react-template.git"
+    "url": "https://github.com/Gefest-Vision/Gefest-Vision-Site"
   },
   "scripts": {
     "start": "react-scripts start",
