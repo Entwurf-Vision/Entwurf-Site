@@ -1,6 +1,7 @@
 {
   "name": "gefest-vision-site",
-  "version": "0.1.0",
+  "version": "0.3.0",
+  "homepage": "https://gefest-vision.github.io/Gefest-Vision-Site/",
   "private": true,
   "dependencies": {
     "@react-three/drei": "^9.53.3",
@@ -22,6 +23,8 @@
     "url": "https://github.com/Gefest-Vision/Gefest-Vision-Site"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -41,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
