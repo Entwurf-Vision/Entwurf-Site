@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {  } from "react";
 import classNames from 'classnames';
+
+// sections
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import FeatureTile from '../elements/FeatureTile';
 
+// three js 
+
+// react icons
 import {IconContext} from "react-icons";
 import { GoMarkGithub, GoGitBranch, GoCircuitBoard,  } from "react-icons/go";
 import { TbHeartRateMonitor, } from "react-icons/tb";
@@ -60,7 +65,7 @@ const FeaturesTiles = ({
       {...props}
       className={outerClasses}
     >
-      <div className="container">
+      <div className="container" >
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className={tilesClasses}>
